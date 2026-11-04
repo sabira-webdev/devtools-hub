@@ -1,0 +1,614 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A focused collection of practical developer tools. Format data, explore utilities, and get back to building.">
+  <meta name="theme-color" content="#080e1c">
+  <title>DevTools Hub – Developer Utilities</title>
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="#" aria-label="DevTools Hub home">
+      <span class="brand-mark" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span>devtools<span class="brand-dot">.</span>hub</span>
+    </a>
+
+    <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+      Menu <span>☰</span>
+    </button>
+
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation">
+      <a class="nav-link active" href="#">Home</a>
+      <a class="nav-link" href="#tools">Explore tools</a>
+      <a class="nav-link" href="#about">About</a>
+    </nav>
+
+    <!-- Header Search -->
+    <button type="button" class="header-search" id="header-search-trigger">
+      <span class="header-search-icon">⌕</span>
+      <span class="header-search-text">Search tools...</span>
+      <kbd>Ctrl K</kbd>
+    </button>
+
+    <a class="header-cta" href="#tools">Open workspace <span>↗</span></a>
+
+  </div>
+</header>
+
+
+<main>
+  <section class="hero-section">
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          THE DEVELOPER'S WORKBENCH
+          <span class="eyebrow-line"></span>
+        </div>
+
+        <h1>Less busywork.<br><span>More building.</span></h1>
+
+        <p class="hero-description">
+          A focused collection of practical tools for developers.
+          Format data, explore utilities, and get back to building.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#tools">
+            Explore the tools <span>↗</span>
+          </a>
+          <a class="text-link" href="#about">
+            What is DevTools Hub? <span>→</span>
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <span class="meta-icon">⌘</span>
+          <span>Fast by design</span>
+          <span class="meta-divider"></span>
+          <span>Runs right in your browser</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Decorative code window">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+
+        <div class="code-window">
+          <div class="window-top">
+            <div class="window-dots"><i></i><i></i><i></i></div>
+            <span>sample.json</span>
+            <span class="window-language">JSON</span>
+          </div>
+
+          <div class="code-content">
+            <div><span class="line-number">01</span><span class="code-brace">{</span></div>
+            <div><span class="line-number">02</span><span class="code-key">"workspace"</span><span class="code-punc">:</span> <span class="code-string">"devtools-hub"</span><span class="code-punc">,</span></div>
+            <div><span class="line-number">03</span><span class="code-key">"built_for"</span><span class="code-punc">:</span> <span class="code-string">"developers"</span><span class="code-punc">,</span></div>
+            <div><span class="line-number">04</span><span class="code-key">"friction"</span><span class="code-punc">:</span> <span class="code-number">0</span><span class="code-punc">,</span></div>
+            <div><span class="line-number">05</span><span class="code-key">"focus"</span><span class="code-punc">:</span> <span class="code-string">"shipping"</span></div>
+            <div><span class="line-number">06</span><span class="code-brace">}</span></div>
+          </div>
+
+          <div class="window-bottom">
+            <span><i class="mini-check">✓</i> Ready to work</span>
+            <span>UTF-8 <b>●</b></span>
+          </div>
+        </div>
+
+        <div class="floating-chip chip-format">
+          <span class="chip-symbol">{ }</span>
+          <span><b>JSON Formatter</b><small>Clean data in seconds</small></span>
+          <span class="chip-arrow">↗</span>
+        </div>
+
+        <div class="floating-chip chip-status">
+          <span class="pulse-ring"></span>
+          <span><b>Workspace online</b><small>Local-first utilities</small></span>
+        </div>
+
+        <div class="art-cross cross-one">+</div>
+        <div class="art-cross cross-two">+</div>
+      </div>
+    </div>
+
+    <div class="container hero-bottom">
+      <span>TOOLS FOR THE WAY YOU BUILD</span>
+      <div class="hero-bottom-line"></div>
+      <span>01 / WORKSPACE</span>
+    </div>
+  </section>
+
+  <section class="tools-section section-space" id="tools">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow section-eyebrow">YOUR TOOLKIT <span class="eyebrow-line"></span></div>
+          <h2>Useful tools.<br><span>No extra noise.</span></h2>
+        </div>
+        <p>Quick, practical utilities for everyday development tasks. Choose a tool and get straight to work.</p>
+      </div>
+
+      <div class="tools-toolbar">
+        <label class="tool-search">
+          <span aria-hidden="true">⌕</span>
+          <input id="tool-search" type="search" placeholder="Find a tool..." aria-label="Search tools">
+          <kbd>/</kbd>
+        </label>
+
+        <div class="filter-list" role="group" aria-label="Filter tools">
+          <button class="filter-button is-active" data-filter="all">All tools <span>04</span></button>
+          <button class="filter-button" data-filter="data">Data</button>
+          <button class="filter-button" data-filter="design">Design</button>
+          <button class="filter-button" data-filter="text">Text</button>
+        </div>
+      </div>
+
+      <div class="tool-grid" id="tool-grid">
+        <article class="tool-card tool-card-featured" data-category="data" data-search="json formatter validator format validate data">
+          <div class="card-topline">
+            <span class="tool-icon json-icon">{ }</span>
+            <span class="tool-status available"><i></i> AVAILABLE NOW</span>
+          </div>
+          <div class="tool-card-content">
+            <div class="tool-category">DATA / 01</div>
+            <h3>JSON Formatter</h3>
+            <p>Make messy JSON readable. Format and validate your data in one place.</p>
+          </div>
+          <a class="tool-open" href="#json-tool">Open tool <span>↗</span></a>
+        </article>
+
+        <article class="tool-card" data-category="design" data-search="color converter hex rgb hsl palette">
+          <div class="card-topline">
+            <span class="tool-icon color-icon"><i></i><i></i><i></i></span>
+            <span class="tool-status available">
+              <i></i> AVAILABLE NOW
+            </span>
+          </div>
+
+          <div class="tool-card-content">
+            <div class="tool-category">DESIGN / 02</div>
+            <h3>Color Converter</h3>
+            <p>Convert HEX, RGB, and HSL values with a live color preview.</p>
+          </div>
+
+          <a class="tool-open" href="#color-converter">
+            Open tool <span>↗</span>
+          </a>
+        </article>
+
+        <article class="tool-card" data-category="text" data-search="base64 encoder decoder text encode decode">
+          <div class="card-topline">
+            <span class="tool-icon base64-icon">64</span>
+            <span class="tool-status available">
+              <i></i> AVAILABLE NOW
+            </span>
+          </div>
+
+          <div class="tool-card-content">
+            <div class="tool-category">TEXT / 03</div>
+            <h3>Base64 Encoder</h3>
+            <p>Encode or decode text quickly without leaving your browser.</p>
+          </div>
+
+          <a class="tool-open" href="#base64-tool">
+            Open tool <span>↗</span>
+          </a>
+        </article>
+        
+      <article class="tool-card" data-category="data" data-search="wordpress php code snippets hooks filters">
+        <div class="card-topline">
+          <span class="tool-icon code-icon">&lt;/&gt;</span>
+          <span class="tool-status available">
+            <i></i> AVAILABLE NOW
+          </span>
+        </div>
+
+        <div class="tool-card-content">
+          <div class="tool-category">WORDPRESS / 04</div>
+          <h3>Snippet Library</h3>
+          <p>A curated collection of practical WordPress and PHP examples.</p>
+        </div>
+
+        <a class="tool-open" href="#snippet-library">
+          Open tool <span>↗</span>
+        </a>
+      </article>
+      
+      <article class="tool-card" data-category="data" data-search="wordpress wp query php posts custom post type generator">
+        <div class="card-topline">
+          <span class="tool-icon code-icon">&lt;/&gt;</span>
+          <span class="tool-status available">
+            <i></i> AVAILABLE NOW
+          </span>
+        </div>
+
+        <div class="tool-card-content">
+          <div class="tool-category">WORDPRESS / 05</div>
+          <h3>WP_Query Generator</h3>
+          <p>Generate custom WordPress queries with PHP code in seconds.</p>
+        </div>
+
+        <a class="tool-open" href="#wp-query-generator">
+          Open tool <span>↗</span>
+        </a>
+      </article>
+
+
+      </div>
+
+      <p class="no-results" id="no-results" hidden>No tools match that search. Try another keyword.</p>
+    </div>
+  </section>
+
+
+  <section class="formatter-section section-space" id="json-tool">
+    <div class="container">
+      <div class="formatter-intro">
+        <div>
+          <div class="eyebrow section-eyebrow">TOOL 001 <span class="eyebrow-line"></span></div>
+          <h2>Make your JSON<br><span>make sense.</span></h2>
+        </div>
+        <p>Paste your JSON below to format it into a clean, readable structure or check it for errors. Your input stays in your browser.</p>
+      </div>
+
+      <div class="formatter-shell">
+        <div class="editor-panel">
+          <div class="editor-header">
+            <span><i class="editor-dot"></i> INPUT.JSON</span>
+            <button id="load-example" class="subtle-button">Load example ↘</button>
+          </div>
+          <textarea id="json-input" spellcheck="false" aria-label="JSON input" placeholder="Paste your JSON here...">{"name":"DevTools Hub","purpose":"Make development simpler","features":["format","validate","build"]}</textarea>
+          <div class="editor-footer">
+            <span id="input-count">0 characters</span>
+            <button id="clear-json" class="subtle-button">Clear input</button>
+          </div>
+        </div>
+
+        <div class="editor-panel output-panel">
+          <div class="editor-header">
+            <span><i class="editor-dot output-dot"></i> FORMATTED OUTPUT</span>
+            <span class="output-label">RESULT</span>
+          </div>
+          <pre id="json-output" aria-live="polite"><code>Your formatted JSON will appear here.</code></pre>
+          <div class="editor-footer">
+            <span id="json-status" class="status-message">Waiting for input</span>
+            <button id="copy-json" class="copy-button" disabled>Copy output <span>↗</span></button>
+          </div>
+        </div>
+
+        <div class="formatter-actions">
+          <button id="format-json" class="button button-primary">Format JSON <span>→</span></button>
+          <button id="minify-json" class="button button-secondary">Minify JSON</button>
+          <button id="validate-json" class="button button-ghost">Validate only</button>
+        </div>
+      </div>
+
+      <p class="privacy-note"><span>◇</span> Your data stays in this browser. This demo does not send JSON to a server.</p>
+    </div>
+  </section>
+  
+  <section class="color-converter-section section-space" id="color-converter">
+    <div class="container">
+      <div class="formatter-intro">
+        <div>
+          <div class="eyebrow section-eyebrow">TOOL 002</div>
+          <h2>Colors made<br><span>simple.</span></h2>
+        </div>
+        <p>Convert between HEX, RGB and HSL values with a live color preview.</p>
+      </div>
+
+      <div class="color-converter-shell">
+        <div class="color-preview" id="color-preview"></div>
+
+        <div class="color-inputs">
+          <label>
+            HEX
+            <div class="color-field">
+              <input id="color-hex" value="#4169FF">
+              <button type="button" data-copy="#color-hex">Copy</button>
+            </div>
+          </label>
+
+          <label>
+            RGB
+            <div class="color-field">
+              <input id="color-rgb" value="rgb(65, 105, 255)">
+              <button type="button" data-copy="#color-rgb">Copy</button>
+            </div>
+          </label>
+
+          <label>
+            HSL
+            <div class="color-field">
+              <input id="color-hsl" value="hsl(226, 100%, 63%)">
+              <button type="button" data-copy="#color-hsl">Copy</button>
+            </div>
+          </label>
+
+          <label class="color-picker-label">
+            Choose a color
+            <input type="color" id="color-picker" value="#4169FF">
+          </label>
+
+          <p id="color-error" class="color-error" role="alert"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="base64-section section-space" id="base64-tool">
+    <div class="container">
+      <div class="formatter-intro">
+        <div>
+          <div class="eyebrow section-eyebrow">TOOL 003</div>
+          <h2>Encode &amp; decode<br><span>with ease.</span></h2>
+        </div>
+        <p>Convert text into Base64 or decode Base64 strings back into readable text.</p>
+      </div>
+
+      <div class="base64-shell">
+        <div class="base64-field">
+          <div class="base64-field-heading">
+            <label for="base64-input">INPUT</label>
+          </div>
+          <textarea id="base64-input" placeholder="Enter your text or Base64 string here..."></textarea>
+        </div>
+
+        <div class="base64-actions">
+          <button type="button" id="base64-encode">Encode to Base64</button>
+          <button type="button" id="base64-decode">Decode from Base64</button>
+          <button type="button" id="base64-clear">Clear</button>
+        </div>
+
+        <div class="base64-field">
+          <div class="base64-field-heading">
+            <label for="base64-output">OUTPUT</label>
+            <button type="button" id="base64-copy">Copy output</button>
+          </div>
+          <textarea id="base64-output" placeholder="Your result will appear here..." readonly></textarea>
+        </div>
+
+        <p id="base64-status" class="base64-status" role="status"></p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="snippet-section section-space" id="snippet-library">
+    <div class="container">
+
+      <div class="formatter-intro">
+        <div>
+          <div class="eyebrow section-eyebrow">TOOL 004</div>
+          <h2>Code smarter.<br><span>Build faster.</span></h2>
+        </div>
+        <p>A collection of useful PHP, WordPress, JavaScript and CSS snippets for everyday development.</p>
+      </div>
+
+      <div class="snippet-library-shell">
+
+        <div class="snippet-toolbar">
+          <input
+            type="search"
+            id="snippet-search"
+            placeholder="Search snippets..."
+            aria-label="Search code snippets"
+          >
+
+          <div class="snippet-filters">
+            <button type="button" class="snippet-filter active" data-filter="All">All</button>
+            <button type="button" class="snippet-filter" data-filter="PHP">PHP</button>
+            <button type="button" class="snippet-filter" data-filter="JavaScript">JavaScript</button>
+            <button type="button" class="snippet-filter" data-filter="CSS">CSS</button>
+          </div>
+        </div>
+
+        <div class="snippet-results-heading">
+          <span>CODE COLLECTION</span>
+          <span id="snippet-count">6 snippets found</span>
+        </div>
+
+        <div class="snippet-list" id="snippet-list"></div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WP QUERY GENERATOR -->
+  <section class="wp-query-section section-space" id="wp-query-generator">
+    <div class="container">
+
+      <div class="formatter-intro">
+        <div>
+          <div class="eyebrow section-eyebrow">TOOL 005</div>
+          <h2>Build queries.<br><span>Write less code.</span></h2>
+        </div>
+        <p>Generate custom WordPress WP_Query PHP code using simple configuration options.</p>
+      </div>
+
+      <div class="wp-query-shell">
+
+        <form id="wp-query-form" class="wp-query-form">
+
+          <div class="wp-query-form-heading">
+            <h3>Query Configuration</h3>
+            <p>Customize your WordPress query settings.</p>
+          </div>
+
+          <div class="wp-query-fields">
+
+            <label>
+              Post Type
+              <select id="wp-post-type">
+                <option value="post">Posts</option>
+                <option value="page">Pages</option>
+                <option value="product">Products</option>
+                <option value="any">Any Post Type</option>
+              </select>
+            </label>
+
+            <label>
+              Posts Per Page
+              <input
+                type="number"
+                id="wp-posts-per-page"
+                value="6"
+                min="1"
+                max="100"
+                required
+              >
+            </label>
+
+            <label>
+              Category Slug
+              <input
+                type="text"
+                id="wp-category"
+                placeholder="e.g. tutorials"
+              >
+            </label>
+
+            <label>
+              Post Status
+              <select id="wp-post-status">
+                <option value="publish">Published</option>
+                <option value="draft">Draft</option>
+                <option value="pending">Pending</option>
+                <option value="private">Private</option>
+                <option value="any">Any Status</option>
+              </select>
+            </label>
+
+            <label>
+              Order By
+              <select id="wp-order-by">
+                <option value="date">Date</option>
+                <option value="title">Title</option>
+                <option value="modified">Modified Date</option>
+                <option value="menu_order">Menu Order</option>
+                <option value="rand">Random</option>
+                <option value="comment_count">Comment Count</option>
+              </select>
+            </label>
+
+            <label>
+              Sort Order
+              <select id="wp-order">
+                <option value="DESC">Descending</option>
+                <option value="ASC">Ascending</option>
+              </select>
+            </label>
+
+          </div>
+
+          <label class="wp-query-checkbox">
+            <input type="checkbox" id="wp-pagination">
+            <span>Include pagination</span>
+          </label>
+
+          <button type="submit" class="wp-query-generate">
+            Generate PHP Code <span>↗</span>
+          </button>
+
+        </form>
+
+        <div class="wp-query-output-section">
+
+          <div class="wp-query-output-heading">
+            <div>
+              <span class="eyebrow">GENERATED OUTPUT</span>
+              <h3>PHP Code</h3>
+            </div>
+
+            <button type="button" id="wp-query-copy">
+              Copy Code
+            </button>
+          </div>
+
+          <pre class="wp-query-code"><code id="wp-query-output"></code></pre>
+
+          <p id="wp-query-status" class="wp-query-status" role="status"></p>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END WP QUERY GENERATOR -->
+
+
+  <section class="about-strip" id="about">
+    <div class="container about-inner">
+      <div class="about-mark">D<span>.</span>H</div>
+      <div>
+        <div class="eyebrow section-eyebrow">WHY DEVTOOLS HUB <span class="eyebrow-line"></span></div>
+        <h2>Built for the details<br>that slow you down.</h2>
+      </div>
+      <p>A growing collection of thoughtful, lightweight tools for people who build for the web. No clutter. Just useful utilities, made with care.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand footer-brand" href="#">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>devtools<span class="brand-dot">.</span>hub</span>
+    </a>
+    <p>Small tools. Smoother workflows.</p>
+    <span class="footer-copy">Independent developer tools · 2026</span>
+  </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+
+
+<!-- GLOBAL SEARCH -->
+<div class="global-search-overlay" id="global-search" hidden>
+  <div class="global-search-modal">
+
+    <div class="global-search-input-wrap">
+      <span class="global-search-icon">⌕</span>
+
+      <input
+        type="search"
+        id="global-search-input"
+        placeholder="Search developer tools..."
+        autocomplete="off"
+        aria-label="Search developer tools"
+      >
+
+      <kbd>ESC</kbd>
+    </div>
+
+    <div class="global-search-heading">
+      AVAILABLE TOOLS
+    </div>
+
+    <div
+      class="global-search-results"
+      id="global-search-results"
+    ></div>
+
+    <div class="global-search-footer">
+      <span>↑ ↓ Navigate</span>
+      <span>↵ Open tool</span>
+      <span>ESC Close</span>
+    </div>
+
+  </div>
+</div>
+<!-- END GLOBAL SEARCH -->
+
+</body>
+</html>
